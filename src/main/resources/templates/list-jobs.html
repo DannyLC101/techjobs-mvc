@@ -11,6 +11,9 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <!-- TODO #3 - Use the same list display from search.html -->
+    <!--added by me -->
+    <div th:replace="fragments :: search-results"></div>
+    <!--added by me -->
 
 </div>
 

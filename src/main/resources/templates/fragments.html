@@ -27,5 +27,21 @@
         </div>
     </div>
 
+    <div th:fragment="search-results">
+        <b><h3 th:text="'(' + ${jobs.size() + ') Result(s)'}"></h3></b>
+        <table align="center" class="job-result" th:each="job : ${jobs}">
+            <tr class="nonblank" th:each="key : ${job.keySet()}">
+                <th class="topic" th:text="${#strings.capitalizeWords(key)}"></th>
+                <td th:text="${job.get(key)}"></td>
+            </tr>
+            <tr class="blank">
+                <th></th>
+
+            </tr>
+
+        </table>
+
+
+    </div>
 </body>
 </html>
